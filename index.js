@@ -47,13 +47,13 @@ function GPIOOnOffAccessory(log, config)
     this.hapCharacteristic = "On";
     this.trueValue = true;
     this.falseValue = false;
-  }
+  };
 
   // Initialize the GPIO object
  // this.sensor = new Gpio(pin, direction, edge, { activeLow: activeLow });
 
   // Initialize the switch service
-  this.service = new Service[hapService](this.name);
+ // this.service = new Service[hapService](this.name);
   /* if (direction == "in")
   {
     this.log("Initializing 'in' GPIO accessory on pin " + pin);
