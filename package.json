@@ -1,6 +1,6 @@
 {
-  "name": "homebridge-gpio-onoff",
-  "version": "0.1.0",
+  "name": "homebridge-state-window",
+  "version": "0.0.1",
   "description": "GPIO onoff plugin for Homebridge: https://github.com/nfarina/homebridge",
   "license": "ISC",
   "keywords": [
@@ -8,7 +8,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git://github.com/krisbreuker/homebridge-gpio-onoff.git"
+    "url": "git://github.com/GatoPharaoh/homebridge-gpio-onoff.git"
   },
   "dependencies": {
     "onoff": "^1.1.1"
@@ -20,6 +20,6 @@
   "bugs": {
     "url": "https://github.com/krisbreuker/homebridge-gpio-onoff/issues"
   },
-  "homepage": "https://github.com/krisbreuker/homebridge-gpio-onoff#readme",
+  "homepage": "https://github.com/GatoPharaoh/homebridge-gpio-onoff",
   "main": "index.js"
 }
