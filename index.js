@@ -47,4 +47,4 @@ function GPIOOnOffAccessory(log, config)
     this.hapCharacteristic = "On";
     this.trueValue = true;
     this.falseValue = false;
-  }
+  };
