@@ -9,7 +9,7 @@ module.exports = function(homebridge)
   Characteristic = homebridge.hap.Characteristic;
 
   // Register this accessory as 'GPIO-OnOff'
-  homebridge.registerAccessory("homebridge-gpio-onoff", "GPIO-OnOff", GPIOOnOffAccessory);
+  homebridge.registerAccessory("homebridge-gpio-onoff2", "GPIO-OnOff2", GPIOOnOffAccessory);
 };
 
 function GPIOOnOffAccessory(log, config)
@@ -29,12 +29,14 @@ function GPIOOnOffAccessory(log, config)
   this.falseValue = config.falseValue;
 
   // Check configuration
-  if (!pin)
+  /* if (!pin)
     throw new Error("You must provide a config value for pin.");
   if ([ "in", "out" ].indexOf(direction) < 0)
     direction = "in";
   if ([ "none", "rising", "falling", "both" ].indexOf(edge) < 0)
-    edge = "none";
+    edge = "none"; 
+  */
+  
 
   // If the specified service or characteristic is unknown, fall back to generic Switch
   if (!(hapService in Service) || !(this.hapCharacteristic in Characteristic))
@@ -48,11 +50,11 @@ function GPIOOnOffAccessory(log, config)
   }
 
   // Initialize the GPIO object
-  this.sensor = new Gpio(pin, direction, edge, { activeLow: activeLow });
+ // this.sensor = new Gpio(pin, direction, edge, { activeLow: activeLow });
 
   // Initialize the switch service
   this.service = new Service[hapService](this.name);
-  if (direction == "in")
+  /* if (direction == "in")
   {
     this.log("Initializing 'in' GPIO accessory on pin " + pin);
     this.service
@@ -70,7 +72,9 @@ function GPIOOnOffAccessory(log, config)
         .on("set", this.writeGPIO.bind(this));
   }
 }
-
+*/
+  
+/*
 GPIOOnOffAccessory.prototype.getServices = function()
 {
   return [this.service];
@@ -129,3 +133,4 @@ GPIOOnOffAccessory.prototype.onGPIOChange = function(err, value)
         .setValue(charValue);
   }
 };
+*/
